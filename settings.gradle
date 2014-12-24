@@ -1,0 +1,10 @@
+rootProject.name = 'roboguice-aggregator'
+include ':roboblender'
+include ':roboguice'
+include ':additional-tests'
+include ':astroboy'
+
+project(':roboblender').projectDir = "$rootDir/roboblender" as File
+project(':roboguice').projectDir = "$rootDir/roboguice" as File
+project(':additional-tests').projectDir = "$rootDir/additional-tests" as File
+project(':astroboy').projectDir = "$rootDir/astroboy" as File

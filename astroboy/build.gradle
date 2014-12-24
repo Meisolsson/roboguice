@@ -1,0 +1,28 @@
+description = 'astroboy'
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile project(':roboguice')
+    androidTestCompile  group: 'junit', name: 'junit', version:'4.11'
+    androidTestCompile  group: 'org.robolectric', name: 'robolectric', version:'2.2'
+    androidTestCompile  group: 'org.mockito', name: 'mockito-core', version:'1.9.5'
+    compile project(':roboblender')
+    provided(group: 'com.google.android', name: 'android', version:'4.1.1.4')
+    provided(group: 'com.google.android.maps', name: 'maps', version:'7_r1')
+}
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion '19.1.0'
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 16
+        versionCode 1
+        versionName "1.0"
+    }
+    packagingOptions {
+        exclude ':roboblender'
+    }
+    android.sourceSets.main.manifest.srcFile 'AndroidManifest.xml'
+}

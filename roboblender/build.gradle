@@ -1,0 +1,8 @@
+description = 'Robo Blender'
+apply plugin: 'java'
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+dependencies {
+    compile group: 'com.google.inject', name: 'blender', version:'4.0-SNAPSHOT'
+    compile group: 'org.apache.velocity', name: 'velocity', version:'1.7'
+}
